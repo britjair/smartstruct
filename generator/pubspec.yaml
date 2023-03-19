@@ -15,5 +15,8 @@ dependencies:
   source_gen: ^1.0.1
   code_builder: ^4.0.0
   smartstruct:
-    path: '../smartstruct'
+    git:
+      url: git@github.com:britjair/smartstruct.git
+      ref: e9c3bd33646a156c00e43afe433a304634cff5b6
+      path: smartstruct
   path: ^1.8.0
