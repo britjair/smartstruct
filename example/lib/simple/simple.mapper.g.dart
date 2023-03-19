@@ -10,18 +10,9 @@ class FooBarMapperImpl extends FooBarMapper {
   FooBarMapperImpl() : super();
 
   @override
-  Bar? fromFoo(Foo? foo) {
-    if (foo == null) {
-      return null;
-    }
-    ;
-    final bar = Bar(foo.fooBar);
-    return bar;
-  }
-
-  @override
   Foo fromBar(Bar bar) {
-    final foo = Foo(bar.fooBar);
+    assert(bar.fooBar2 != null, 'fooBar2 cannot be blank');
+    final foo = Foo(bar.fooBar2 ?? 'JU');
     return foo;
   }
 }

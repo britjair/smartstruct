@@ -5,10 +5,7 @@ class Mapper {
   final bool useInjection;
   final bool caseSensitiveFields;
 
-  const Mapper({
-    this.useInjection = false,
-    this.caseSensitiveFields = false
-  });
+  const Mapper({this.useInjection = false, this.caseSensitiveFields = false});
 }
 
 const mapper = Mapper();
@@ -19,10 +16,27 @@ const mapper = Mapper();
 class Mapping {
   final dynamic source;
   final String target;
+  final bool ignore;
   final String? defaultValue;
-  const Mapping({
-    required this.source,
-    required this.target,
-    this.defaultValue
-  });
+  const Mapping(
+      {required this.source,
+      required this.target,
+      this.defaultValue,
+      this.ignore = false});
+}
+
+/// Annotate methods to indicate that you don't want smartstruct to generate a mapping implementation for you
+///
+/// Example
+/// ```dart
+/// @Mapper()
+/// abstract class UserMapper {
+///   @IgnoreMapping // no method will be generated
+///   static EnumTargetFoo mapFoo(UserSource source) => EnumTargetFoo.ONE; // no static method will be generated
+///   static UserTarget fromSourceStatic(UserSource source) => _$fromSourceStatic(source);
+///   ...
+/// }
+/// ```
+class IgnoreMapping {
+  const IgnoreMapping();
 }

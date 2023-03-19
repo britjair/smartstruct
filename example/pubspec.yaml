@@ -10,10 +10,16 @@ dependencies:
   injectable: ^1.4.1
   #smartstruct: ^1.2.3+1
   smartstruct:
-     path: ../smartstruct
+    git:
+      url: git@github.com:britjair/smartstruct.git
+      # ref: 12136cce87614c20734f4d29ee1945440264a2fc
+      path: smartstruct
 dev_dependencies:
   build_runner: ^2.0.4
   injectable_generator: ^1.4.1
  # smartstruct_generator: ^1.2.3+1
   smartstruct_generator:
-    path: ../generator
+    git:
+      url: git@github.com:britjair/smartstruct.git
+      # ref: 12136cce87614c20734f4d29ee1945440264a2fc
+      path: generator
