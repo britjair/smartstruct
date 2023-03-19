@@ -19,8 +19,8 @@ class Mapping {
   final bool ignore;
   final String? defaultValue;
   const Mapping(
-      {required this.source,
-      required this.target,
+      {required this.target,
+      this.source,
       this.defaultValue,
       this.ignore = false});
 }
