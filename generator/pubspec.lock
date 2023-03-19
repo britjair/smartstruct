@@ -334,8 +334,8 @@ packages:
     dependency: "direct main"
     description:
       path: smartstruct
-      ref: e9c3bd33646a156c00e43afe433a304634cff5b6
-      resolved-ref: e9c3bd33646a156c00e43afe433a304634cff5b6
+      ref: HEAD
+      resolved-ref: "12136cce87614c20734f4d29ee1945440264a2fc"
       url: "git@github.com:britjair/smartstruct.git"
     source: git
     version: "1.2.3+1"
